@@ -11,7 +11,7 @@ import java.net.URLConnection;
  * Created by User on 30.05.2016.
  */
 public class GetContent {
-    public static String getContent(String http)throws Exception{
+    public static String getString(String http)throws Exception{
         URL tmp = new URL(http);
         URLConnection urlc=tmp.openConnection();
         System.out.println(urlc.getContent());

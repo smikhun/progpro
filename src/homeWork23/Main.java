@@ -5,10 +5,7 @@ import utils.GetContent;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
-import java.net.URL;
 
 /**
  * Created by User on 28.05.2016.
