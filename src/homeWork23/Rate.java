@@ -1,5 +1,6 @@
 package homeWork23;
 
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 
 import javax.xml.bind.annotation.XmlRootElement;
@@ -7,25 +8,28 @@ import javax.xml.bind.annotation.XmlRootElement;
 /**
  * Created by User on 29.05.2016.
  */
-@XmlRootElement(name = "rate")
+@XmlRootElement()
 public class Rate {
-    @XmlElement
+    @XmlAttribute
+    public String id;
+    @XmlElement(name = "Name")
     public String name;
-    @XmlElement
+    @XmlElement(name = "Rate")
     public double rate;
-    @XmlElement
+    @XmlElement(name = "Date")
     public String date;
-    @XmlElement
+    @XmlElement(name = "Time")
     public String time;
-    @XmlElement
+    @XmlElement(name = "Ask")
     public double ask;
-    @XmlElement
+    @XmlElement(name = "Bid")
     public double bid;
 
     @Override
     public String toString() {
         return "Rate{" +
-                "name='" + name + '\'' +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
                 ", rate=" + rate +
                 ", date='" + date + '\'' +
                 ", time='" + time + '\'' +

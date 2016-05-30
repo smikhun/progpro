@@ -5,7 +5,9 @@ import utils.GetContent;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.net.URL;
 
 /**
@@ -18,15 +20,16 @@ public class Main {
         try {
             JAXBContext jaxbContext = JAXBContext.newInstance(Query.class);
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-            String result = GetContent.getContent(yahoo);
-            File g = new File("txmt.dsf");
+            File g = GetContent.toFile(yahoo) ;
             Query query = (Query) unmarshaller.unmarshal(g);
-
             System.out.println(query);
+            System.out.println();
+
 
         }catch (JAXBException e){
             System.out.println(e);
         }
+
 
 
     }

@@ -3,18 +3,19 @@ package homeWork23;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.ArrayList;
 
 /**
  * Created by User on 26.05.2016.
  */
-@XmlRootElement(name = "result")
-public class Result {
+@XmlRootElement(name = "results")
+public class Results {
     @XmlElement
-    public Rate rate;
+    public ArrayList<Rate> rate;
 
     @Override
     public String toString() {
-        return "Result{" +
+        return "Results{" +
                 "rate=" + rate +
                 '}';
     }
