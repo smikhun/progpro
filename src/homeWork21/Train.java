@@ -34,4 +34,15 @@ public class Train {
                 ", departure='" + departure + '\'' +
                 '}';
     }
+
+    public Train(String id, String from, String to, String date, String departure) {
+        this.id = id;
+        this.from = from;
+        this.to = to;
+        this.date = date;
+        this.departure = departure;
+    }
+
+    public Train() {
+    }
 }
